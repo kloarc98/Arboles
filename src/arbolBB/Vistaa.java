@@ -197,6 +197,7 @@ public class Vistaa extends javax.swing.JFrame {
 
     private void botonInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarActionPerformed
         try {
+            //Ingresa el dato para ser agregado al arbol
             int dato = Integer.parseInt(txtdato.getText());
             if (this.simulador.insertar(dato)) {
                 JOptionPane.showMessageDialog(null, "El dato fue insertado correctamente", " ...", 1);
@@ -212,15 +213,16 @@ public class Vistaa extends javax.swing.JFrame {
 
     private void InOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InOrdenActionPerformed
         // TODO add your handling code here:
+        //Recorre el arbol y lo ordena de la forma Inorden
         String recorrido = null;
         recorrido = this.simulador.inOrden();
-        
         this.impresion.setText("");
         this.impresion.setText(recorrido);
     }//GEN-LAST:event_InOrdenActionPerformed
 
     private void PreOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreOrdenActionPerformed
         // TODO add your handling code here:
+        //Llama a la funcion y lo ordena de la forma Preorden
         String recorrido = null;
         recorrido = this.simulador.preOrden();
         
@@ -230,6 +232,7 @@ public class Vistaa extends javax.swing.JFrame {
 
     private void PostOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PostOrdenActionPerformed
         // TODO add your handling code here:
+        //Llama a la funcion y lo ordena de la forma PostOrden
         String recorrido = null;
         recorrido = this.simulador.postOrden();
         

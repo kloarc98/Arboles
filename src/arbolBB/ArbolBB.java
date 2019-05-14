@@ -25,6 +25,7 @@ public class ArbolBB {
     }
     
     public boolean agregar(int dato) {
+        //Agrega el nodo en el arbol
         Nodo nuevo = new Nodo(dato, null, null);
         insertar(nuevo, raiz);
         return true;
@@ -53,6 +54,7 @@ public class ArbolBB {
     }
 
     public Nodo getRaiz() {
+        //Regresa la variable raiz
         return raiz;
     }
 
